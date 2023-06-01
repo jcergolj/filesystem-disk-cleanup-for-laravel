@@ -1,0 +1,41 @@
+{
+    "name": "jcergolj/filesystem-disk-cleanup-for-laravel",
+    "description": "Delete old files on a specific Laravel filesystem disk.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Janez Cergolj",
+            "email": "me@jcergolj.me.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "autoload": {
+        "psr-4": {
+            "Jcergolj\\FilesystemDiskCleanup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jcergolj\\FilesystemDiskCleanup\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "pint": "vendor/bin/pint",
+        "analyse": [
+            "@pint"
+        ]
+    },
+    "require-dev": {
+        "laravel/pint": "^1.9",
+        "phpunit/phpunit": "^10.1",
+        "orchestra/testbench": "^8.5"
+    },
+     "extra": {
+        "laravel": {
+            "providers": [
+                "Jcergolj\\FilesystemDiskCleanup\\FilesystemDiskCleanupServiceProvider"
+            ]
+        }
+    }
+}
